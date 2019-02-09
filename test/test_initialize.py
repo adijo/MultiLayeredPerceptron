@@ -1,6 +1,7 @@
 import unittest
-from initialize import initialize_weights
 import numpy as np
+
+from initialize import AbstractInitialization
 from literals.initialization import InitLiterals
 
 
@@ -10,7 +11,7 @@ class TestInitialize(unittest.TestCase):
         in_dim, out_dim = 2, 3
 
         # WHEN
-        weight = initialize_weights(in_dim, out_dim, InitLiterals.ZERO)
+        weight = AbstractInitialization.initialize_weights(in_dim, out_dim, InitLiterals.ZERO)
         expected_weight = np.array([[0, 0],
                                     [0, 0],
                                     [0, 0]])
@@ -24,7 +25,7 @@ class TestInitialize(unittest.TestCase):
         in_dim, out_dim = 2, 3
 
         # WHEN
-        weight = initialize_weights(in_dim, out_dim, InitLiterals.NORMAL)
+        weight = AbstractInitialization.initialize_weights(in_dim, out_dim, InitLiterals.NORMAL)
 
         # THEN
         self.assertEqual(weight.shape, (out_dim, in_dim))
