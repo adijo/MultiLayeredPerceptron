@@ -23,3 +23,6 @@ pip install -r requirements.txt
 * To upload experiment results to `comet.ml`, 
 * Create a `comet.ml` account.
 * Export `COMET_API_KEY`, `COMET_WORKSPACE` and `COMET_PROJECT_NAME` variables and run `experiments.py`
+
+# Sample Experiment
+![Experiment](loss.png)
