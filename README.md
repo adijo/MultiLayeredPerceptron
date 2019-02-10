@@ -17,6 +17,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+* Setup `PYTHONPATH` to contain `src/` and `dataset`.
+
 * Run tests
 `nosetests -v test/`
 
